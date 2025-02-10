@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        center{
+        margin-top:200px;
+        }
+    </style>
+</head>
+<body>
+{% if freeks %}
+    {{freeks}}
+{% endif %}
+<center>
+    <h1>Register</h1>
+<form action="" method="post">
+        {% csrf_token %}
+
+    <div>
+        <label for="name">Email</label><br>
+        <input type="text" name="name" id="name"><br><br>
+    </div>
+    <div>
+        <label for="password">Password</label><br>
+        <input type="password" name="password" id="password"><br><br>
+    </div>
+    <button type="submit">Submit</button>
+</form>
+</center>
+</body>
+</html>

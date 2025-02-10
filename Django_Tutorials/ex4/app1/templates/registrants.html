@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{{data}}
+    {% if users %}
+        {%for user in users %}
+            {{user.name}}
+            {{user.password}}
+        {% endfor %}
+    {% else %}
+        <h1>No users yet </h1>
+    {% endif %}
+</body>
+</html>

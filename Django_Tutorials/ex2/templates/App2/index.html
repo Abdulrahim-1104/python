@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <center> <h1><b> BIO DATA</b></h1></center>
+    <center>
+        {% for key,value in bio.items %}
+            <b>{{ key }}</b>  :  <b>{{value}}</b> <br>
+        {% empty %}
+            not available
+        {% endfor %}
+    </center>
+</body>
+</html>
