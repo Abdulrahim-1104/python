@@ -1,0 +1,36 @@
+{% extends "ex4.1.html" %}
+{% block body %}
+<table>
+    <thead>
+        <tr>
+            <td><b>NAME</b></td>
+            <td><b>SPORTS</b></td>
+        </tr>
+    </thead>
+    <tbody>
+        {% for name in registrants %}
+        <tr>
+            <td>{{name}}</td>
+            <td>{{registrants[name]}}</td>
+        </tr>
+        {% endfor %}
+
+    </tbody>
+</table><br><br>
+<a href="/"><button type="button">Redirect to Register</button></a>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100px;
+        }
+
+        table, th, td {
+            border: 2px solid black;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: center;
+        }
+    </style>
+{% endblock %}
